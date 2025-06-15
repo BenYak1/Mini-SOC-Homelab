@@ -11,7 +11,7 @@ A compact, five‑VM security operations lab that **detects**, **responds**, and
 
 **Watch a demonstration of the homelab in action:**
 
-[`GIF`](img/showcase.gif)
+[`showcase`](img/showcase.mp4)
 
 
 ## Lab Topology
@@ -214,7 +214,7 @@ python3 soar.py  # inside mini‑soar VM
    ```bash
    ```
 
-gobuster dir -u [http://192.168.56.110](http://192.168.56.110) -w /usr/share/wordlists/dirb/common.txt
+gobuster dir -u http://192.168.56.110 -w /usr/share/wordlists/dirb/common.txt
 
 ````
    *Expected* : Splunk alert → SOAR blocks IP via iptables → Telegram “blocked” message.
