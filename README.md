@@ -202,10 +202,4 @@ input(type="imudp" port="514")
 
 ---
 
-## License
-
-MIT — see `LICENSE` file.
-
----
-
 Author: Ben Yakoubov
