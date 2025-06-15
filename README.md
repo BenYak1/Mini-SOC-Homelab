@@ -165,10 +165,15 @@ targets:
 | **`alert_enrichment`**      | Successful login to Cowrie SSH honeypot       | - Parse source IP from login event<br>- Query AbuseIPDB for threat score<br>- Send alert to Telegram with origin IP and score context                                                                                           | ![alert\_enrichment](https://github.com/user-attachments/assets/4b0d2eec-f70c-48db-a822-172ae838928e) |
 | **`malware_fetch&analyze`** | File download attempt via curl/wget in Cowrie | - Extract URL from log line<br>- Download file directly from SOAR VM<br>- Submit to [VirusTotal](https://virustotal.com/) for analysis<br>- Send detection score, link, and verdict to Telegram<br>- Send full report to Splunk | ![malware\_fetch](https://github.com/user-attachments/assets/1e758342-5422-4314-bbdc-5740b1b526e5)    |
 
-VIRUSTOTAL report output:
+
+
+## VIRUSTOTAL report output:
+
 ![Screenshot_20250615_230717](https://github.com/user-attachments/assets/f0b7408a-bfa9-42b7-81f2-662f386f7a1f)
 
-This is the index that has the soar's target monitored:
+
+## Enriched event goes back to splunk, to index soar_actions:
+
 ![Screenshot_20250615_230241](https://github.com/user-attachments/assets/187f7a31-1e5e-4d2a-9196-c5f56717aab4)
 
 ---
