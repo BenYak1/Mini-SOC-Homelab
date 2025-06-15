@@ -106,7 +106,7 @@ index=soar sourcetype="cowrie_log" host=honeypot ("CMD: curl" OR "CMD: wget")
 
 *Schedule*: 1 min, look‑back 5 min.
 
-> **Screenshot placeholder**: `![Splunk soar index](docs/img/splunk_soar_index.png)`
+![soarindex](https://github.com/user-attachments/assets/d2ce3a20-1aa2-4e8d-9cc2-bbbd28614d29)
 
 ---
 
@@ -161,11 +161,13 @@ targets:
 
 | Playbook                    | Trigger                                     | Key Steps                                                                    | Telegram Output                                            |
 | --------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| **iptables\_block**         | Gobuster scan                               | SSH → *passwordless sudo iptables -I INPUT -s IP -j DROP* ; AbuseIPDB check ; send to HEC | `docs/img/telegram_gobuster.png`                           |
-| **alert + enrichment**      | Successful Cowrie login                     | AbuseIPDB check, and telegram message notifying about the login              | `docs/img/telegram_honeypot.png`                           |
-| **malware\_fetch\&analyze** | `CMD: curl/wget http://…` *inside honeypot* | Download file → VirusTotal scan → report → HEC event                         | `docs/img/telegram_malware.png` & `docs/img/vt_report.png` |
 
-> **Screenshot placeholder**: `![Enriched malware event](docs/img/enriched_malware_event.png)`
+| **iptables\_block**         | Gobuster scan                               | SSH → *passwordless sudo iptables -I INPUT -s IP -j DROP* ; AbuseIPDB check ; send to HEC | `![Screenshot_20250615_225630](https://github.com/user-attachments/assets/57ddc617-3853-4641-a175-7d9b9bbda98b)`                           |
+| **alert + enrichment**      | Successful Cowrie login                     | AbuseIPDB check, and telegram message notifying about the login              | `![Screenshot_20250615_225650](https://github.com/user-attachments/assets/4b0d2eec-f70c-48db-a822-172ae838928e)
+`                           |
+| **malware\_fetch\&analyze** | `CMD: curl/wget http://…` *inside honeypot* | Download file → VirusTotal scan → report → HEC event                         | `![Screenshot_20250615_225703](https://github.com/user-attachments/assets/1e758342-5422-4314-bbdc-5740b1b526e5)` |
+
+![Screenshot_20250615_230241](https://github.com/user-attachments/assets/187f7a31-1e5e-4d2a-9196-c5f56717aab4)
 
 ---
 
