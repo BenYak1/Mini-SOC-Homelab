@@ -162,10 +162,9 @@ targets:
 | Playbook                    | Trigger                                     | Key Steps                                                                    | Telegram Output                                            |
 | --------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------- |
 
-| **iptables\_block**         | Gobuster scan                               | SSH → *passwordless sudo iptables -I INPUT -s IP -j DROP* ; AbuseIPDB check ; send to HEC | `![Screenshot_20250615_225630](https://github.com/user-attachments/assets/57ddc617-3853-4641-a175-7d9b9bbda98b)`                           |
-| **alert + enrichment**      | Successful Cowrie login                     | AbuseIPDB check, and telegram message notifying about the login              | `![Screenshot_20250615_225650](https://github.com/user-attachments/assets/4b0d2eec-f70c-48db-a822-172ae838928e)
-`                           |
-| **malware\_fetch\&analyze** | `CMD: curl/wget http://…` *inside honeypot* | Download file → VirusTotal scan → report → HEC event                         | `![Screenshot_20250615_225703](https://github.com/user-attachments/assets/1e758342-5422-4314-bbdc-5740b1b526e5)` |
+| **iptables\_block**         | Gobuster scan                               | SSH → *passwordless sudo iptables -I INPUT -s IP -j DROP* ; AbuseIPDB check ; send to HEC | ![Screenshot_20250615_225630](https://github.com/user-attachments/assets/57ddc617-3853-4641-a175-7d9b9bbda98b)                           |
+| **alert + enrichment**      | Successful Cowrie login                     | AbuseIPDB check, and telegram message notifying about the login              | ![Screenshot_20250615_225650](https://github.com/user-attachments/assets/4b0d2eec-f70c-48db-a822-172ae838928e)                           |
+| **malware\_fetch\&analyze** | `CMD: curl/wget http://…` *inside honeypot* | Download file → VirusTotal scan → report → HEC event                         | ![Screenshot_20250615_225703](https://github.com/user-attachments/assets/1e758342-5422-4314-bbdc-5740b1b526e5) |
 
 ![Screenshot_20250615_230241](https://github.com/user-attachments/assets/187f7a31-1e5e-4d2a-9196-c5f56717aab4)
 
