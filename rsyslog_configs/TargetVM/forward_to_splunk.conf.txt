@@ -1,0 +1,11 @@
+$ModLoad imfile
+
+$InputFileName /var/log/apache2/access.log
+$InputFileTag targetvm:
+$InputFileStateFile stat-targetvm
+$InputFileSeverity info
+$InputFileFacility local6
+$InputRunFileMonitor
+
+# splunk server's ip
+local6.* @192.168.56.105:514

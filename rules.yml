@@ -1,0 +1,20 @@
+# rules.yml
+- id: gobuster_Scan
+  # We expect lines like:
+  # 185.244.25.11 - - [30/May/2025:00:00:00 +0000] scanned the server with gobuster
+  match: '^\s*(?P<tgt>[a-zA-Z0-9_-]+)\s+(?P<ip>\d{1,3}(?:\.\d{1,3}){3})\s+-\s+-\s+\[\d{2}/[A-Za-z]{3}/\d{4}:\d{2}:\d{2}:\d{2}\s+\+\d{4}\]\s+scanned the server with gobuster'
+  severity: high
+  playbook: iptables_block
+
+- id: honeypot_login
+  # honeypot 192.168.56.101 - - [13/Jun/2025:01:18:01 +0000] connected to the honeypot
+  match: '^\s*\w+\s+(?P<ip>\d{1,3}(?:\.\d{1,3}){3}) - - \[.*\] connected to the honeypot'
+  severity: medium
+  playbook: alert
+
+- id: honeypot_malware_fetch&analyze
+  # honeypot 192.168.56.101 - - [13/Jun/2025:23:07:46 +0000] downloaded a suspicious file to the honeypot from http://192.168.56.108:8080/file
+  match: '^\s*(?P<tgt>[a-zA-Z0-9_-]+)\s+(?P<ip>\d{1,3}(?:\.\d{1,3}){3})\s+-\s+-\s+\[[^\]]+\]\s+downloaded a suspicious file to the honeypot from (?P<url>https?:\/\/[^\s]+)'
+  severity: medium
+  playbook: malware_fetch&analyze
+

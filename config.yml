@@ -1,0 +1,4 @@
+# config.yml
+tail_paths:
+  - "/var/log/splunk_forwarded.log"
+

@@ -1,0 +1,7 @@
+template(name="OnlyMsg" type="string" string="%msg%\n")
+
+# if a udp segment from the splunk server has been sent here then append the message to logfile
+if $fromhost-ip == '192.168.56.105' then {
+    action(type="omfile" file="/var/log/splunk_forwarded.log" template="OnlyMsg")
+    stop
+}

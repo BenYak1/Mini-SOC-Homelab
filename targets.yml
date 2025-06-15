@@ -1,0 +1,10 @@
+targets:
+  targetvm:
+    host: 192.168.56.110
+    user: soarbot
+    key_path: /home/user/.ssh/soar_pubkey
+
+  honeypot:
+    host: 192.168.56.109
+    user: vboxuser
+    key_path: /home/user/.ssh/soar
