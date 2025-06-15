@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 """
-SOAR-Lite tails Splunk log, matches rules and runs playbooks.
-A minimal SOAR tool that tails a Splunk alerts log file, matches them against rules,
-checks IP reputation, and if the score is above the configured threshold it blocks the ip with iptales,
-enriches the splunk alert and sends it back to splunk and sends Telegram alerts. 
-
 Author: Ben Yakoubov
 """
 
