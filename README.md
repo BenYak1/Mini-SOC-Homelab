@@ -11,7 +11,7 @@ A compact, five‑VM security operations lab that **detects**, **responds**, and
 
 **Watch a demonstration of the homelab in action:**
 
-[`showcase`](img/showcase.mp4)
+![`showcase`](img/showcase1.mp4)
 
 
 ## Lab Topology
@@ -52,7 +52,7 @@ mini-soc-homelab/
 
 # End-to-End Data-Flow Diagram
 
-[`Diagram`](img/diagram.jpg)
+![`Diagram`](img/diagram.jpg)
 
 ## 1 – Log & Alert Pipeline
 
