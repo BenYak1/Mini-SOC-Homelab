@@ -52,7 +52,7 @@ mini-soc-homelab/
 
 # End-to-End Data-Flow Diagram
 
-[`Diagram`](img/diagram.png)
+[`Diagram`](img/diagram.jpg)
 
 ## 1 – Log & Alert Pipeline
 
