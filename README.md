@@ -20,7 +20,7 @@ https://github.com/user-attachments/assets/4126bba9-88d4-4f2e-8875-9a572a372a77
 
 | VM             | IP               | Role                             | RAM  | Notes                               |
 | -------------- | ---------------- | -------------------------------- | ---- | ----------------------------------- |
-| **targetvm**   | `192.168.56.110` | Apache 2 server (attack surface) | 2 GB | Access log → rsyslog sender         |
+| **targetvm**   | `192.168.56.107` | Apache 2 server (attack surface) | 2 GB | Access log → rsyslog sender         |
 | **honeypot**   | `192.168.56.109` | Cowrie SSH honeypot              | 2 GB | Cowrie log → rsyslog sender         |
 | **attackervm** | `192.168.56.101` | Kali (attack generator)          | 2 GB | Launches Gobuster / SSH / wget      |
 | **splunk‑vm**  | `192.168.56.105` | Splunk in Docker (SIEM)          | 4 GB | Receives UDP 514, runs alerts       |
@@ -145,7 +145,7 @@ tail_paths:
 ```yaml
 targets:
   targetvm:
-    host: 192.168.56.110
+    host: 192.168.56.107
     user: soarbot
     key_path: /home/user/.ssh/soar_pubkey
 
