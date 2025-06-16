@@ -11,7 +11,7 @@ A compact, five‑VM security operations lab that **detects**, **responds**, and
 
 **Watch a demonstration of the homelab in action:**
 
-![`showcase`](img/showcase.mp4)
+https://github.com/user-attachments/assets/4126bba9-88d4-4f2e-8875-9a572a372a77
 
 
 
