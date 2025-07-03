@@ -1,6 +1,6 @@
 # SOAR‑Lite (`soar.py`)
 
-A **Security Orchestration, Automation & Response (SOAR) micro‑engine** purpose‑built for a Mini‑SOC homelab.
+A **Security Orchestration, Automation & Response (SOAR) micro‑engine** I built for this Homelab..
 It watches Splunk alert logs, matches each line against YAML‑defined rules, and executes **asynchronous playbooks** that can:
 
 * **Block attackers instantly** with remote `iptables`
