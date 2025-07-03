@@ -88,7 +88,7 @@ python soar.py -d
 
 ### `alert_only`
 
-Low‑risk path (e.g. honeypot login): AbuseIPDB lookup + Telegram alert—no active blocking.
+Honeypot login: AbuseIPDB lookup + Telegram alert—no active blocking.
 
 ---
 
@@ -100,7 +100,7 @@ Low‑risk path (e.g. honeypot login): AbuseIPDB lookup + Telegram alert—no ac
 { "event": { … }, "sourcetype": "soar" }
 ```
 
-and `POST`s it with the HEC token. Build dashboards that correlate detections with SOAR actions in one place.
+and `POST`s it with the HEC token to a separate index in splunk called soar_actions, with the event info + enrichment from playbooks
 
 ---
 
