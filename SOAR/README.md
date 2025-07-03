@@ -1,14 +1,12 @@
 # SOAR‑Lite (`soar.py`)
 
-A **single‑file Security Orchestration, Automation & Response (SOAR) micro‑engine** purpose‑built for a Mini‑SOC homelab.
+A **Security Orchestration, Automation & Response (SOAR) micro‑engine** purpose‑built for a Mini‑SOC homelab.
 It watches Splunk alert logs, matches each line against YAML‑defined rules, and executes **asynchronous playbooks** that can:
 
 * **Block attackers instantly** with remote `iptables`
 * **Enrich events** via AbuseIPDB & VirusTotal
 * **Send enriched incidents back to Splunk (HEC)**
 * **Alert you on Telegram in real time**
-
-Everything runs in one file—no paid SOAR platform, just pure Python + asyncio.
 
 ---
 
@@ -111,5 +109,3 @@ and `POST`s it with the HEC token. Build dashboards that correlate detections wi
 * **SSH keys**: dedicate a user with limited sudo for `iptables`.
 * **VirusTotal quota**: free API is rate‑limited—batch uploads will stall, 4 requests every minute for the free version..
 * **Cooldown**: tune via `COOLDOWN_SEC`.
-* **Splunk HEC**: traffic is HTTPS—verify certificates in production.
-
