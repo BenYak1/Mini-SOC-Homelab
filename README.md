@@ -32,7 +32,9 @@ https://github.com/user-attachments/assets/4126bba9-88d4-4f2e-8875-9a572a372a77
 
 ```text
 mini-soc-homelab/
-├─ soar.py
+├─ SOAR
+│  ├─soar.py
+│  ├─README.md
 ├─ requirements.txt
 ├─ config.yml
 ├─ rules.yml
